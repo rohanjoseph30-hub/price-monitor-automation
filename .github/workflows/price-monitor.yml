@@ -1,0 +1,39 @@
+name: Price Monitor Automation
+
+on:
+  schedule:
+    # Run every hour (0 * * * * = every hour at minute 0)
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run price monitor
+        env:
+          TARGET_PRICE: ${{ secrets.TARGET_PRICE }}
+          COMPETITOR_URL: ${{ secrets.COMPETITOR_URL }}
+          SCRAPING_DOG_API_KEY: ${{ secrets.SCRAPING_DOG_API_KEY }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
+          TWILIO_WHATSAPP_TO: ${{ secrets.TWILIO_WHATSAPP_TO }}
+        run: npm start
+      
+      - name: Notify on failure
+        if: failure()
+        run: echo "Price monitoring job failed. Check the logs above."

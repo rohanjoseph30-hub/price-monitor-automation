@@ -1,0 +1,19 @@
+{
+  "name": "price-monitor-automation",
+  "version": "1.0.0",
+  "description": "Automated competitor price monitoring with WhatsApp alerts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["price-monitoring", "web-scraping", "automation"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "twilio": "^4.0.0",
+    "dotenv": "^16.3.1"
+  }
+}
