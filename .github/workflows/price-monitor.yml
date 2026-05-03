@@ -36,4 +36,4 @@ jobs:
       
       - name: Notify on failure
         if: failure()
-        run: echo "Price monitoring job failed. Check the logs above."
+        run: echo 'Price monitoring job failed. Check the logs above.'
