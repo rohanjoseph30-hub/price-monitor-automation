@@ -11,9 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.6.0",
-    "cheerio": "^1.0.0-rc.12",
-    "twilio": "^4.0.0",
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "twilio": "^4.10.0",
     "dotenv": "^16.3.1"
   }
 }
