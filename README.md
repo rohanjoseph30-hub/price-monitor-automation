@@ -37,13 +37,13 @@ Go to your repository **Settings → Secrets and variables → Actions** and add
 | Secret Name | Value | Example |
 |---|---|---|
 | `TARGET_PRICE` | Price threshold (AED) | `500` |
-| `COMPETITOR_URL` | Website to monitor | `https://example.com/product` |
+| `COMPETITOR_URL` | Website to monitor | `https://www.novotelsharjahexpocentre.com/` |
 | `SCRAPING_DOG_API_KEY` | Your Scraping Dog API key | `abc123...` |
 | `PROXY_URL` | Proxy endpoint | `https://api.scrapingdog.com/scrape?api_key=` |
 | `TWILIO_ACCOUNT_SID` | Twilio Account SID | `ACxxxxxxx...` |
 | `TWILIO_AUTH_TOKEN` | Twilio Auth Token | `xxxxxxx...` |
 | `TWILIO_WHATSAPP_FROM` | Twilio WhatsApp sender | `whatsapp:+14155238886` |
-| `TWILIO_WHATSAPP_TO` | Your WhatsApp number | `whatsapp:+971xxxxxxxxx` |
+| `TWILIO_WHATSAPP_TO` | Your WhatsApp number | `whatsapp:+971585948924` |
 
 ### 5. Test Locally (Optional)
 ```bash
