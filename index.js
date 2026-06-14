@@ -76,7 +76,7 @@ async function sendAlert(price) {
             return;
         }
 
-        const client = new twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+        const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
         
         console.log(`[${new Date().toISOString()}] Sending WhatsApp alert...`);
         await client.messages.create({
