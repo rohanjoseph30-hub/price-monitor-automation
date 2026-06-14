@@ -30,7 +30,7 @@ jobs:
       
       - name: Run price monitor
         env:
-          TARGET_PRICE: ${{ secrets.TARGET_PRICE }}
+          TARGET_PRICE: "150"  {{ secrets.TARGET_PRICE }} 
           COMPETITOR_URL: ${{ secrets.COMPETITOR_URL }}
           SCRAPING_DOG_API_KEY: ${{ secrets.SCRAPING_DOG_API_KEY }}
           PROXY_URL: ${{ secrets.PROXY_URL }}
